@@ -18,12 +18,12 @@ $(PROG): $(OBJS)
 install: $(PROG)
 	mkdir -p '$(DESTDIR)$(PREFIX)/bin/'
 	install -s tetris '$(DESTDIR)$(PREFIX)/bin/'
-	mkdir -p '$(DESTDIR)$(PREFIX)/man/man6/'
-	install tetris.6 '$(DESTDIR)$(PREFIX)/man/man6/'
+	mkdir -p '$(DESTDIR)$(PREFIX)/share/man/man6/'
+	install tetris.6 '$(DESTDIR)$(PREFIX)/share/man/man6/'
 
 uninstall:
 	$(RM) '$(DESTDIR)$(PREFIX)/bin/tetris'
-	$(RM) '$(DESTDIR)$(PREFIX)/man/man6/tetris.6'
+	$(RM) '$(DESTDIR)$(PREFIX)/share/man/man6/tetris.6'
 
 clean:
 	-$(RM) $(OBJS) $(PROG)
